@@ -1,0 +1,7 @@
+/*List all of the person names born between 8PM 
+and 9PM but not in the month of February
+*/
+
+SELECT firstName, lastName FROM Entry WHERE MONTH(birthday) != 2 AND TIME(birthday) >= "20:00:00" AND TIME(birthday) <= "21:00:00";
+
+250 rows;
