@@ -1,0 +1,13 @@
+//List all of the countries with respective occurence totals in DESC order
+
+SELECT country, COUNT(*) AS Occurence
+FROM Address
+GROUP BY country
+ORDER BY COUNT(*) DESC;
+
+//Country names should all appear lowercase
+
+SELECT LOWER(country), COUNT(*) AS Occurence
+FROM Address
+GROUP BY country
+ORDER BY COUNT(*) DESC;
