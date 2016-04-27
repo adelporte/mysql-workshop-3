@@ -1,0 +1,79 @@
+//List all of the first names for AddressBook.name="Pharetra Ut Limited"
+
+SELECT firstName FROM Entry JOIN AddressBook ON Entry.addressBookId = AddressBook.id WHERE name="Pharetra Ut Limited";
+
++-------------+
+| firstName   |
++-------------+
+| Zelenia     |
+| Abdul       |
+| Idola       |
+| Illana      |
+| Winifred    |
+| Buckminster |
+| Heidi       |
+| Nell        |
+| Ciara       |
+| Sylvia      |
+| Caryn       |
+| Dieter      |
+| Jamalia     |
+| Herrod      |
+| Unity       |
+| Pascale     |
+| Colton      |
+| Jamal       |
+| Abel        |
+| Zena        |
+| Prescott    |
+| Idona       |
+| Paloma      |
+| Neve        |
+| Kyla        |
+| Kimberley   |
+| Jillian     |
+| Addison     |
+| Jacqueline  |
+| Sasha       |
+| Lee         |
+| Salvador    |
+| Yoko        |
+| Stacy       |
+| Halee       |
+| Blythe      |
+| Tad         |
+| Haley       |
+| Lara        |
+| Summer      |
+| Latifah     |
+| Faith       |
+| Stacey      |
+| Jennifer    |
+| Fulton      |
+| Colin       |
+| Thane       |
+| Caryn       |
+| Bo          |
+| Jamal       |
+| Amena       |
+| Melanie     |
+| Driscoll    |
+| Gareth      |
+| Colt        |
+| Martha      |
+| Sierra      |
+| Nita        |
+| Celeste     |
+| Kathleen    |
+| Samuel      |
+| Aaron       |
+| Cheyenne    |
+| Brett       |
+| Rebekah     |
++-------------+
+
+65 rows
+
+//The first and last letters should be capitalized
+
+SELECT CONCAT(UPPER(LEFT(firstName, 1)), SUBSTRING(firstName, 2, (LENGTH(firstName)-2)), UPPER(RIGHT(firstName, 1))) FROM Entry JOIN AddressBook ON Entry.addressBookId = AddressBook.id WHERE name="Pharetra Ut Limited";
