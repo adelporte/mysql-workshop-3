@@ -1,0 +1,7 @@
+/*List all Account emails with AddressBook containing 
+Phone numbers with a country code
+*/
+
+SELECT email FROM Account JOIN AddressBook ON AddressBook.accountId=Account.id JOIN Entry ON AddressBook.id=Entry.addressBookId JOIN Phone ON Entry.id=Phone.entryId WHERE content LIKE "1-%";
+
+200 rows in set (0.01 sec)
