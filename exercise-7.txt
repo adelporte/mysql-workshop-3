@@ -1,0 +1,8 @@
+/*List all possible domain name values
+for ElectronicMail (email@domain.name)*/
+
+SELECT content FROM ElectronicMail WHERE content LIKE "%@";
+
+SELECT SUBSTRING_INDEX(content, '@', -1) AS OrderedList FROM ElectronicMail GROUP BY OrderedList;
+
+1983 rows in set (0.00 sec)
